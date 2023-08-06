@@ -37,8 +37,9 @@ function handlerClicked(evt) {
   const currentImgSrc = evt.target.dataset.source;
   // const currentAlt = evt.target.
 
+  console.log(evt.target);
   instance = basicLightbox.create(`
-    <img src="${currentImgSrc}" alt="">
+    <img src="${currentImgSrc}">
 `);
   instance.show();
 }
