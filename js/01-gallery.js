@@ -35,12 +35,11 @@ function handlerClicked(evt) {
     return;
   }
   const currentImgSrc = evt.target.dataset.source;
-  // const currentAlt = evt.target.
 
-  console.log(evt.target);
   instance = basicLightbox.create(`
     <img src="${currentImgSrc}">
 `);
+
   instance.show();
 }
 
@@ -48,8 +47,6 @@ list.addEventListener("keydown", handlerEsc);
 
 function handlerEsc(evt) {
   if (evt.key === "Escape") {
-    if (instance) {
-      instance.close();
-    }
+    instance.close();
   }
 }
