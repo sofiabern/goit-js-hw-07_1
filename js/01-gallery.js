@@ -43,10 +43,11 @@ function handlerClicked(evt) {
   instance.show();
 }
 
-list.addEventListener("keydown", handlerEsc);
+document.addEventListener("keydown", handlerEsc);
 
 function handlerEsc(evt) {
   if (evt.key === "Escape") {
     instance.close();
   }
+  document.removeEventListener("keydown", handlerEsc);
 }

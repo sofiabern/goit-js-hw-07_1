@@ -26,22 +26,3 @@ const lightbox = new SimpleLightbox(".gallery a", {
   captionDelay: 250,
   showCounter: false,
 });
-
-list.addEventListener("click", handlerClicked);
-
-function handlerClicked(evt) {
-  evt.preventDefault();
-
-  if (evt.target === evt.currentTarget) {
-    return;
-  }
-  lightbox.open();
-}
-
-list.addEventListener("keydown", handlerEsc);
-
-function handlerEsc(evt) {
-  if (evt.key === "Escape") {
-    lightbox.close();
-  }
-}
