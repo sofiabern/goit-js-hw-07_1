@@ -41,13 +41,12 @@ function handlerClicked(evt) {
 `);
 
   instance.show();
+  document.addEventListener("keydown", handlerEsc);
 }
-
-document.addEventListener("keydown", handlerEsc);
 
 function handlerEsc(evt) {
   if (evt.key === "Escape") {
     instance.close();
+    document.removeEventListener("keydown", handlerEsc);
   }
-  document.removeEventListener("keydown", handlerEsc);
 }
